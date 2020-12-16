@@ -3,7 +3,7 @@ import Component from '../lib/component';
 import { Dropdown } from 'bootstrap';
 import router from './../routes';
 
-export default class Header extends Component {
+export default class HeaderComponent extends Component {
     constructor() {
         super(header, 'nav');
     }

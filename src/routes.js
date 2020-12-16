@@ -1,5 +1,5 @@
 import Navigo from 'navigo';
-import Base64Decode from './components/base64decode';
+import Base64Component from './components/base64';
 
 function setContent(content) {
     document.querySelector('#main-container').innerHTML = content;
@@ -7,12 +7,12 @@ function setContent(content) {
 
 const router = new Navigo();
 router.on({
-    'base64decode': function () {
-        setContent(new Base64Decode().html);
+    'base64': function () {
+        setContent(new Base64Component().html);
     }
 });
 router.on(() => {
-    setContent(new Base64Decode().html);
+    setContent(new Base64Component().html);
 });
 
 export default router;

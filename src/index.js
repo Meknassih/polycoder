@@ -1,13 +1,13 @@
 import './styles.scss';
 import './routes';
-import Header from './components/header';
-import RouterOutlet from './components/router-outlet';
+import HeaderComponent from './components/header';
+import RouterOutletComponent from './components/router-outlet';
 import router from './routes';
 
 // Base components to render on all pages
 const components = [
-    new Header(),
-    new RouterOutlet()
+    new HeaderComponent(),
+    new RouterOutletComponent()
 ];
 
 components.forEach(component => {

@@ -1,2 +1,10 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+    #main-container {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
