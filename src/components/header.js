@@ -9,9 +9,9 @@ export default class HeaderComponent extends Component {
     }
 
     onInit() {
-        this.element.querySelector('#link-b64dec').addEventListener('click', e => {
+        this.element.querySelector('#link-base64').addEventListener('click', e => {
             e.preventDefault();
-            router.navigate('/base64decode');
+            router.navigate('/base64');
         });
         router.updatePageLinks();
     }
