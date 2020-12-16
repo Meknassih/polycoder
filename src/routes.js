@@ -6,13 +6,21 @@ function setContent(content) {
 };
 
 const router = new Navigo();
+
+// Routes declarations
 router.on({
     'base64': function () {
-        setContent(new Base64Component().html);
+        const comp = new Base64Component();
+        setContent(comp.html);
+        comp.onInit();
     }
 });
+
+// Default route
 router.on(() => {
-    setContent(new Base64Component().html);
+    const comp = new Base64Component();
+    setContent(comp.html);
+    comp.onInit();
 });
 
 export default router;
