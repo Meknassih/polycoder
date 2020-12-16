@@ -36,6 +36,7 @@
     "@popperjs/core": "^2.6.0",
     "autoprefixer": "^10.1.0",
     "bootstrap": "^5.0.0-beta1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "navigo": "^7.1.2"
   }
 }
