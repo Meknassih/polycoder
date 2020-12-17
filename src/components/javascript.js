@@ -1,6 +1,8 @@
 import javascript from './javascript.html';
 import Component from '../lib/component';
 import { minify } from 'terser';
+import { format } from 'prettier/standalone';
+import parser from 'prettier/parser-babel';
 
 export default class JavascriptComponent extends Component {
     constructor() {
@@ -44,7 +46,11 @@ export default class JavascriptComponent extends Component {
     }
 
     beautify(unformatted) {
-        return encodeURI(unformatted);
+        return format(unformatted, {
+            singleQuote: true,
+            parser: 'babel',
+            plugins: [parser]
+        });
     }
 
     getTextSize(text) {
