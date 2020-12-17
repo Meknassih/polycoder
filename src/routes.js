@@ -1,6 +1,7 @@
 import Navigo from 'navigo';
 import Base64Component from './components/base64';
 import UriComponent from './components/uri';
+import JavascriptComponent from './components/javascript';
 
 function setContent(content) {
     document.querySelector('#main-container').innerHTML = content;
@@ -26,6 +27,12 @@ router.on({
         setContent(comp.html);
         comp.onInit();
         setActiveInNavbar('link-uri');
+    },
+    'javascript': function () {
+        const comp = new JavascriptComponent();
+        setContent(comp.html);
+        comp.onInit();
+        setActiveInNavbar('link-javascript');
     },
 });
 

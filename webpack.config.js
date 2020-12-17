@@ -7,6 +7,12 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
+    resolve: {
+        fallback: {
+            "path": false,
+            "fs": false
+        }
+    },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -78,7 +84,12 @@ module.exports = {
             }
         ],
     },
-    plugins: [new HtmlWebpackPlugin({})],
+    plugins: [new HtmlWebpackPlugin({
+        title: 'Polycoder - Encode, decode, beautify, minify, and more...',
+        scriptLoading: 'defer',
+        favicon: 'src/assets/favicon.ico',
+        meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+    })],
     optimization: {
         splitChunks: {
             chunks: 'async',
