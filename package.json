@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development --config webpack.config.js serve",
-    "build": "webpack --mode production --config webpack.config.js"
+    "build": "webpack --mode production --config webpack.config.js",
+    "add:route": "node src/lib/add_route_component.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Meknassih/polycoder#readme",
   "devDependencies": {
+    "chalk": "^4.1.0",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "html-loader": "^1.3.2",
