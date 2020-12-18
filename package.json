@@ -9,7 +9,8 @@
     "build": "webpack --mode production --config webpack.config.js",
     "add:route": "node src/lib/add_route_component.js",
     "add:link": "node src/lib/add_link_component.js",
-    "add:comp": "node src/lib/generate_component.js"
+    "add:page": "node src/lib/generate_component.js",
+    "add:comp": "npx hygen component new"
   },
   "repository": {
     "type": "git",
