@@ -3,11 +3,13 @@ import './routes';
 import HeaderComponent from './components/header';
 import RouterOutletComponent from './components/router-outlet';
 import router from './routes';
+import FooterComponent from './components/footer';
 
 // Base components to render on all pages
 const components = [
     new HeaderComponent(),
-    new RouterOutletComponent()
+    new RouterOutletComponent(),
+    new FooterComponent(),
 ];
 
 components.forEach(component => {
