@@ -15,7 +15,7 @@ const routeEntryLines = `\t'${process.argv[2].toLowerCase()}': function () {
 \t},`.split('\n');
 // console.table(routeEntryLines);
 const importStatement = `import ${process.argv[2].charAt(0).toUpperCase() + process.argv[2].slice(1)}Component from './components/${process.argv[2].toLowerCase()}';`;
-const routeFilePath = 'src/test.js';
+const routeFilePath = 'src/routes.js';
 
 fs.readFile(routeFilePath, (err, res) => {
     if (err) {
