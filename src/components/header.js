@@ -13,6 +13,14 @@ export default class HeaderComponent extends Component {
             e.preventDefault();
             router.navigate('/base64');
         });
+        this.element.querySelector('#link-uri').addEventListener('click', e => {
+            e.preventDefault();
+            router.navigate('/uri');
+        });
+        this.element.querySelector('#link-javascript').addEventListener('click', e => {
+            e.preventDefault();
+            router.navigate('/javascript');
+        });
         router.updatePageLinks();
     }
 }
