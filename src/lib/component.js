@@ -1,8 +1,9 @@
 export default class Component {
-    constructor(html, tag = 'div') {
+    constructor(html) {
         this.html = html;
-        this.element = document.createElement(tag);
-        this.element.innerHTML = this.html;
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = html;
+        this.element = wrapper.firstChild;
     }
 
     onInit() { }
