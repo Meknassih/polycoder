@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= h.inflection.dasherize(name.toLowerCase()) %>.html
+to: src/components/<%= name.toLowerCase() %>.html
 ---
 <div class="row">
     <div class="col-12">
